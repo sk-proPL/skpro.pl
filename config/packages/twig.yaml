@@ -1,0 +1,10 @@
+twig:
+    file_name_pattern: '*.twig'
+
+    paths:
+        '%kernel.project_dir%/templates/dashboard': Dashboard
+        '%kernel.project_dir%/templates/page': Page
+
+when@test:
+    twig:
+        strict_variables: true

@@ -1,0 +1,36 @@
+version: '3'
+services:
+  php:
+    build:
+      context: docker
+      dockerfile: Dockerfile
+    environment:
+      APP_ENV: "dev"
+      DATABASE_SERVER_VERSION: "8.0.39"
+      DATABASE_URL: "mysql://root:mysql@mysql/skpro-standard-%kernel.environment%??charset=utf8mb4&serverVersion=8.0.39"
+    working_dir: /app
+    volumes:
+      - "${CATALOG:-.}/:/app"
+    ports:
+      - "${HTTP_PORT:-8000}:80"
+    depends_on:
+      - mysql
+    networks:
+      - skpro
+    container_name: symfony
+
+
+  mysql:
+    container_name: mysql
+    image: mysql:8.0
+    platform: linux/amd64
+    environment:
+      MYSQL_ROOT_PASSWORD: mysql
+    ports:
+      - ${MYSQL_PORT:-3306}:3306
+    networks:
+      - skpro
+
+networks:
+  skpro:
+    driver: bridge

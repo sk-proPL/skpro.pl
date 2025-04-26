@@ -1,0 +1,11 @@
+parameters:
+    level: max
+    reportUnmatchedIgnoredErrors: false
+    treatPhpDocTypesAsCertain: false
+    paths:
+        - src
+
+    ignoreErrors:
+        - identifier: missingType.iterableValue
+        - identifier: missingType.generics
+        - '#Property SkPro\\Standard\\Entity\\User::\$id \(int\|null\) is never assigned int#'
