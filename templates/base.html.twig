@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
+    {% block head %}
         <meta charset="UTF-8">
         <title>{% block title %} {% endblock %}</title>
-
-        {% block stylesheets %}
-        {% endblock %}
-
-        {% block javascripts %}
-        {% endblock %}
+    {% endblock %}
     </head>
 
     <body>

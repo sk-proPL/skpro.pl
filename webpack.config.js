@@ -14,6 +14,10 @@ Encore
     .enableVersioning(Encore.isProduction())
     .enableSassLoader()
     .enableVersioning()
+    .copyFiles({
+        from: './assets/page/img',
+        to: 'img/[path][name].[ext]'
+    })
 ;
 
 const pageConfig = Encore.getWebpackConfig();
