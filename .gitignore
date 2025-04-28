@@ -2,6 +2,7 @@
 /yarn.lock
 /.idea
 /.vscode
+/package-lock.json
 
 ###> symfony/framework-bundle ###
 /.env.local
