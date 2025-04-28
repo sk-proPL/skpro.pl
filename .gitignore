@@ -3,6 +3,7 @@
 /.idea
 /.vscode
 /package-lock.json
+/public/uploads
 
 ###> symfony/framework-bundle ###
 /.env.local
