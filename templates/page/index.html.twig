@@ -1,12 +1,13 @@
 {% extends 'base.html.twig' %}
+ 
+ {% block head %}
+     {% include "@Page/assets/styles.html.twig" %}
+     {% include "@Page/assets/scripts.html.twig" %}
+ {% endblock %}
+ 
+ {% block body %}
+   <body class="index-page bg-gray-200">
+      {{ component('Alert', {message: 'test alert!'}) }}
+   </body>
+ {% endblock %}
 
-{% block head %}
-    {% include "@Page/assets/styles.html.twig" %}
-    {% include "@Page/assets/scripts.html.twig" %}
-{% endblock %}
-
-{% block body %}
-<body class="index-page bg-gray-200">
-
-</body>
-{% endblock %}
