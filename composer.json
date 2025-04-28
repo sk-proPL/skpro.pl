@@ -101,10 +101,14 @@
             "importmap:install": "symfony-cmd"
         },
         "post-install-cmd": [
-            "@auto-scripts"
+            "@auto-scripts",
+            "mkdir -p public/uploads",
+            "chmod 775 public/uploads"
         ],
         "post-update-cmd": [
-            "@auto-scripts"
+            "@auto-scripts",
+            "mkdir -p public/uploads",
+            "chmod 775 public/uploads"
         ]
     },
     "conflict": {
