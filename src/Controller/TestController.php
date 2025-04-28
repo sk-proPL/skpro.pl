@@ -15,7 +15,7 @@ class TestController
     public function __invoke():Response
     {
         return new Response(
-            $this->twig->render('@Page/test.html.twig')
+            $this->twig->render('@Page/index.html.twig')
         );
     }
 }
